@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Media-Queries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      [class*="col-"] {
+        float: left;
+        padding: 10px;
+      }
+
+      .all {
+            display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+      /* For tablets: */
+      @media only screen and (min-width: 600px) {
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+        .col-s-3 {
+          width: 25%;
+        }
+        .col-s-4 {
+          width: 33.33%;
+        }
+        .col-s-5 {
+          width: 41.66%;
+        }
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+
+            /* For desktop: */
+      @media only screen and (min-width: 768px) {
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+          font-size: 10px;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+
+
+      header {
+        background-color: #0c1a94;
+        color: #ffffff;
+        padding: 15px;
+        letter-spacing: 5px;
+      }
+
+      .left::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding: 20px;
+        margin-bottom: 7px;
+        background-color: green;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.5);
+        font-size: calc(15px + 0.2vw);
+        font-weight: bolder;
+      }
+      li:hover {
+        background-color: rgb(255, 115, 0);
+      }
+
+      .middle {
+        letter-spacing: 2px;
+        line-height: 30px;
+        color: #0c1a94;
+        font-size: 20px;
+        text-align: justify;
+                font-size: calc(15px + 0.5vw);
+
+      }
+
+      .middle p {
+        margin-top: 200px 60px;
+        font-weight: border;
+      }
+
+      .middle h1 {
+
+      }
+
+      .left {
+        letter-spacing: 2px;
+        line-height: 25px;
+        color: #0c1a94;
+        font-size: 20px;
+                        font-size: calc(10px + 0.6vw);
+
+      }
+
+      .aside {
+        background-color: rgb(255, 115, 0);
+        margin: 10px;
+        padding: 15px;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+
+      .aside p {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+      .aside h2 {
+        border-top: 0.5px dashed white;
+        padding-top: 20px;
+      }
+
+      .footer {
+        background-color: #0c1a94;
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: calc(15px + 1vw);
+        margin: 100px 10px;
+      }
+      h2 {
+        font-size: calc(10px + 1vw);
+      }
+      h3 {
+        font-size: calc(5px + 1vw);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="col-12  col-s-12">
+      <h1>DCI - Web Developer</h1>
+    </header>
+<div class="all col-12 col-s-12">
+    <div class="col-3 col-s-6 left">
+      <ul>
+        <li>About Me</li>
+        <li>What I can Offer?</li>
+        <li>Company Service</li>
+        <li>Business Cases</li>
+        <li>Accomplishments</li>
+        <li>How to Find Me?</li>
+        <li>My Linkedin</li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-s-6 middle">
+      <h1 class="col-12 col-s-8">BEA BLOME | PROFILE</h1>
+      <br />
+      <p>
+        2013-2015: Media Manager <br />
+        Dingzun is a media partner of Financial Times, Wall Street Journey,
+        Bloomberg, and China Daily. Responsible for analyzing data and KPI to
+        clients, elaborating online advertising integration plans through social
+        media/ SEO/ DSP and PR release. Managed to help international clients
+        increase sales in China by adopting online advertising strategies and
+        data analysis.
+        <!-- <img class="col-7" src="./ext.jpeg" /> -->
+      </p>
+              2015~2018: WasaTea<br />
+              Establishment of an online tea brand promoting Chinese whole-leaf tea
+              and Chinese tea culture. Responsible for developing digital marketing
+              strategies, website design, executing online media data analysis,
+              financial budget forecasting & planning, establishing cross-brand
+              promotions, organizing offline tea education events. Planning and
+              managing online video series related to Chinese tea culture on Chinese
+              social media, and the production of advertising videos for clients such
+              as Teabuddy, InWe Cha. Managed to reach 300K followers on Chinese social
+              media. Rewarded and named the 3rd most Popular Influencer Media in China
+              by Pear Video in 2017.
+              <img class="col-5 col-s-5" src="./wasatealogo.jpg" />
+              <img class="col-7 col-s-7" src="./wasateainterview.jpg" />
+              </p>
+                2017~2018: Blome Design<br />Establishment of an online-based brand promoting smart
+                design travel accessories. Responsible for developing digital marketing
+                strategies, website design, executing E-commerce online data analysis
+                and collection, KPI analysis, financial budget forecasting and planning,
+                online platform operations, daily sales operation and monitoring, and
+                supply chain communication.
+                <img class="col-11 col-s-11" src="./blomedesign.png" />
+                <br />
+                      <p>
+                        2018~2020: Web Developer<br />
+                        Student Web Developer at DCI Digital Career Institute GmbH
+                        <img class="col-11 col-s-11" src="./codingdog.jpg" />
+
+
+    </div>
+
+    <div class="col-3 col-s-12 right">
+      <div class="aside">
+        <img src="./chihuahua.jpg" alt="bea" class="col-12  col-s-12" img />
+
+        <h2>Experience</h2>
+        <p>Student Web Developer at DCI Digital Career Institute GmbH</p>
+        <p>Co-Founder at WasaTea</p>
+
+        <h2>Education</h2>
+        <p>Finance & Business at Sheffield Hallam University</p>
+        <h2>Skills</h2>
+        <p>Digital market, Online-marketing, Web development, Data Science</p>
+        <h2>Accomplishments</h2>
+        <p>
+          Rewarded and named the 3rd most Popular Influencer Media in China by
+          Pear Video in 2017
+        </p>
+        <h2>Interests</h2>
+        <p>Business Building, Tea Culture, Chinese Culture</p>
+      </div>
+    </div>
+</div>
+    <div class="col-12 col-s-12 footer">
+      <p>
+        Made by Bea Blome | DCI
+      </p>
+    </div>
+  </body>
+</html>
